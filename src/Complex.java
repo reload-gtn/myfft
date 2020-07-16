@@ -15,6 +15,14 @@ public class Complex {
         return Im;
     }
 
+    public void setRe(double a) {
+        Re = a;
+    }
+
+    public void setIm(double a) {
+        Im = a;
+    }
+
     //вывод в тектс
     public String toString(){
         return "Re=" + Re + " Im=" + Im + "i";
