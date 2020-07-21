@@ -34,19 +34,22 @@ public class Complex {
     }
 
     //суммирование
-    public void add(Complex b) {
+    public Complex add(Complex b) {
         Re = Re + b.getRe();
         Im = Im + b.getIm();
+        return new Complex(Re, Im);
     }
     //вычитание
-    public void sub(Complex b) {
+    public Complex sub(Complex b) {
         Re = Re - b.getRe();
         Im = Im - b.getIm();
+        return new Complex(Re, Im);
     }
     //произведение
-    public void prod(Complex b) {
+    public Complex prod(Complex b) {
         Re = Re * b.getRe() - Im * b.getIm();
         Im = Im * b.getRe() + Re * b.getIm();
+        return new Complex(Re, Im);
     }
 
     //аргумент
