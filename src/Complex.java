@@ -35,21 +35,24 @@ public class Complex {
 
     //суммирование
     public Complex add(Complex b) {
-        Re = Re + b.getRe();
-        Im = Im + b.getIm();
-        return new Complex(Re, Im);
+        Complex a = this;
+        double real = a.Re + b.getRe();
+        double imag = a.Im + b.getIm();
+        return new Complex(real, imag);
     }
     //вычитание
     public Complex sub(Complex b) {
-        Re = Re - b.getRe();
-        Im = Im - b.getIm();
-        return new Complex(Re, Im);
+        Complex a = this;
+        double real = a.Re - b.getRe();
+        double imag = a.Im - b.getIm();
+        return new Complex(real, imag);
     }
     //произведение
     public Complex prod(Complex b) {
-        Re = Re * b.getRe() - Im * b.getIm();
-        Im = Im * b.getRe() + Re * b.getIm();
-        return new Complex(Re, Im);
+        Complex a = this;
+        double real = a.Re * b.Re - a.Im * b.Im;
+        double imag = a.Re * b.Im + a.Im * b.Re;
+        return new Complex(real, imag);
     }
 
     //аргумент
