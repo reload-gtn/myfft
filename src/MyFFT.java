@@ -1,6 +1,6 @@
 public class MyFFT {
     //число точек дискретного преобразования
-    static int Ndft = 8;
+    static int Ndft = 256;
     //частота дискретизации
     static double Fdft = 8000;
 
@@ -152,11 +152,11 @@ public class MyFFT {
 
         System.out.println(" DFT: " );
         for (int i = 0; i < test.dft(var2).length; i++) {
-            System.out.println(i*fd + " : " + test.dft(var2)[i].toString());
+            System.out.println(i*fd + " : " + test.dft(var2)[i].abs());
         }
         System.out.println(" FFT: " );
         for (int i = 0; i < test.fft(var2).length; i++) {
-            System.out.println(i*fd + " : " + test.fft(var2)[i].toString());
+            System.out.println(i*fd + " : " + test.fft(var2)[i].abs());
         }
     }
 }
